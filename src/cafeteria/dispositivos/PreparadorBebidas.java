@@ -6,12 +6,14 @@ import cafeteria.dispositivos.Licuadora;
 
 // ESTE EQUIVALE AL SEREVICIO
 public class PreparadorBebidas {
-  private EquipoCocina cafetera;
-  private EquipoCocina licuadora;
+  private final EquipoCocina cafetera;
+  private final EquipoCocina licuadora;
+  private final EquipoCocina exprimidor;
 
-  public PreparadorBebidas(EquipoCocina licuadora, EquipoCocina cafetera) {
+  public PreparadorBebidas(EquipoCocina licuadora, EquipoCocina cafetera, EquipoCocina exprimidor) {
     this.cafetera = cafetera;
     this.licuadora = licuadora;
+    this.exprimidor = exprimidor;
   }
 
   public void prepararDesayuno() {
@@ -20,6 +22,9 @@ public class PreparadorBebidas {
     cafetera.preparar();
     licuadora.encender();
     licuadora.preparar();
+
+    exprimidor.encender();
+    exprimidor.preparar();
     System.out.println("Desayuno listo.");
   }
 
@@ -27,6 +32,7 @@ public class PreparadorBebidas {
     System.out.println("Apagando equipos...");
     cafetera.apagar();
     licuadora.apagar();
+    exprimidor.apagar();
     System.out.println("Equipos apagados.");
   }
 }
