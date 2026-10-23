@@ -1,15 +1,17 @@
 package cafeteria;
 
 import cafeteria.dispositivos.Cafetera;
+import cafeteria.dispositivos.EquipoCocina;
 import cafeteria.dispositivos.Licuadora;
 
+// ESTE EQUIVALE AL SEREVICIO
 public class PreparadorBebidas {
   private Cafetera cafetera;
-  private Licuadora licuadora;
+  private EquipoCocina licuadora;
 
-  public PreparadorBebidas() {
+  public PreparadorBebidas(EquipoCocina licuadora) {
     this.cafetera = new Cafetera();
-    this.licuadora = new Licuadora();
+    this.licuadora = licuadora;
   }
 
   public void prepararDesayuno() {
