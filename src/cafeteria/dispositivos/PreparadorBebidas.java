@@ -1,4 +1,4 @@
-package cafeteria;
+package cafeteria.dispositivos;
 
 import cafeteria.dispositivos.Cafetera;
 import cafeteria.dispositivos.EquipoCocina;
