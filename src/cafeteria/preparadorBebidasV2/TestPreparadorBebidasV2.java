@@ -1,10 +1,6 @@
 package cafeteria.preparadorBebidasV2;
 
-import cafeteria.PreparadorBebidas;
-import cafeteria.dispositivos.Cafetera;
-import cafeteria.dispositivos.EquipoCocina;
-import cafeteria.dispositivos.Exprimidor;
-import cafeteria.dispositivos.Licuadora;
+import cafeteria.dispositivos.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,11 +11,13 @@ public class TestPreparadorBebidasV2 {
     EquipoCocina licuadora = new Licuadora();
     EquipoCocina cafetera = new Cafetera();
     EquipoCocina exprimidor = new Exprimidor();
+    EquipoCocina maquinaTe = new MaquinaTe();
 
     List<EquipoCocina> listaDeEquipoCocinas = new ArrayList<>();
     listaDeEquipoCocinas.add(cafetera);
     listaDeEquipoCocinas.add(exprimidor);
     listaDeEquipoCocinas.add(licuadora);
+    listaDeEquipoCocinas.add(maquinaTe);
 
     PreparadorBebidasV2 preparador = new PreparadorBebidasV2(listaDeEquipoCocinas);
     preparador.prepararDesayuno();
