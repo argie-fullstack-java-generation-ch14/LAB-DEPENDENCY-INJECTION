@@ -1,5 +1,6 @@
 package cafeteria;
 
+import cafeteria.dispositivos.Cafetera;
 import cafeteria.dispositivos.EquipoCocina;
 import cafeteria.dispositivos.Licuadora;
 
@@ -8,13 +9,14 @@ public class TestAnalisis {
   public static void main(String[] args) {
 
     EquipoCocina licuadora = new Licuadora();
+    EquipoCocina cafetera = new Cafetera();
 
-    PreparadorBebidas preparador = new PreparadorBebidas(licuadora);
+    PreparadorBebidas preparador = new PreparadorBebidas(licuadora, cafetera);
     preparador.prepararDesayuno();
     preparador.apagarTodo();
 
     // SEGUNDO PREPARADOR
-    PreparadorBebidas preparador2 = new PreparadorBebidas(licuadora);
+    PreparadorBebidas preparador2 = new PreparadorBebidas(licuadora, cafetera);
 
     System.out.println("Problema: Codigo repetido.");
   }

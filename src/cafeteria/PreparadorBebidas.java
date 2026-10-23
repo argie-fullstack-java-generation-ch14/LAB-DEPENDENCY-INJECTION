@@ -6,11 +6,11 @@ import cafeteria.dispositivos.Licuadora;
 
 // ESTE EQUIVALE AL SEREVICIO
 public class PreparadorBebidas {
-  private Cafetera cafetera;
+  private EquipoCocina cafetera;
   private EquipoCocina licuadora;
 
-  public PreparadorBebidas(EquipoCocina licuadora) {
-    this.cafetera = new Cafetera();
+  public PreparadorBebidas(EquipoCocina licuadora, EquipoCocina cafetera) {
+    this.cafetera = cafetera;
     this.licuadora = licuadora;
   }
 
